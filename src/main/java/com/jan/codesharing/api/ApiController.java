@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiController {
     @GetMapping("/hello")
     public ResponseEntity<String> hello() {
-        return new ResponseEntity<>("hello", HttpStatus.OK);
+        return new ResponseEntity<>("hello from api", HttpStatus.OK);
     }
 }

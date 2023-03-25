@@ -13,11 +13,7 @@ import platform.code.CodeSnippet;
 public class ApiController {
     @GetMapping("/code")
     public ResponseEntity<?> hello() {
-        CodeSnippet codeSnippet = new CodeSnippet("""
-                public static void main(String[] args) {
-                   \s
-                }
-                """);
+        CodeSnippet codeSnippet = new CodeSnippet("public static void main(String[] args) {}");
         return new ResponseEntity<>(codeSnippet, HttpStatus.OK);
     }
 

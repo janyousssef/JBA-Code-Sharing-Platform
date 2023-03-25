@@ -26,3 +26,5 @@ hs_err_pid*
 .idea/*
 /.idea/
 .idea\
+/target/classes/application.properties
+/JBA-Code-Sharing-Platform.iml

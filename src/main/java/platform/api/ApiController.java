@@ -21,7 +21,7 @@ public class ApiController {
     }
 
     @PostMapping(value = "/code/new", consumes = "application/json")
-    public ResponseEntity<?> newCode(@RequestAttribute String newCode) {
+    public ResponseEntity<?> newCode(@RequestAttribute(value = "code") String newCode) {
         codeRepo.setCode(new CodeEntity(newCode));
         return ResponseEntity.ok().build();
     }

@@ -24,4 +24,12 @@ public class WebController {
         mv.setViewName("code");
         return mv;
     }
+
+    @GetMapping("/code/new")
+    public ModelAndView newCode() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("create");
+        return mv;
+    }
+
 }

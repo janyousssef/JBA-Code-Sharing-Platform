@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 
 @Repository
 public class CodeRepo {
-    String initialCode = "public static void main(String[] args) {}";
+    private final String initialCode = "public static void main(String[] args) {}";
     private CodeEntity code = new CodeEntity(initialCode, getDate());
 
     public CodeRepo() {

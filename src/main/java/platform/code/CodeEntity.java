@@ -1,5 +1,7 @@
 package platform.code;
 
-public record CodeEntity(String code) {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public record CodeEntity(String code, @JsonProperty("date") String creationDate) {
 }
 

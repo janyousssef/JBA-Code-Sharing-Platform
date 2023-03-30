@@ -5,5 +5,8 @@
     <title>Code</title>
 </head>
 <body>
-<pre><span th:utext="${codeEntity.code}"></span></pre></body>
+<pre id="load_date"><span>date: </span><span th:utext="${codeEntity.creationDate}"></span></pre>
+<pre id="code_snippet" th:utext="${codeEntity.code}"></pre>
+</body>
+
 </html>

@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import platform.code.CodeEntity;
 import platform.code.CodeRepo;
 
-import java.time.LocalDateTime;
-
 @RestController
 @RequestMapping(path = "/api", produces = "application/json")
 public class ApiController {
@@ -24,7 +22,7 @@ public class ApiController {
 
     @PostMapping(value = "/code/new", consumes = "application/json")
     public ResponseEntity<?> newCode(@RequestAttribute String newCode) {
-        codeRepo.setCode(new CodeEntity(newCode, LocalDateTime.now().toString()));
+        codeRepo.setCode(new CodeEntity(newCode));
         return ResponseEntity.ok().build();
     }
 

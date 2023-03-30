@@ -11,9 +11,10 @@ import platform.code.CodeRepo;
 public class ApiController {
     final CodeRepo codeRepo;
 
-    public ApiController() {
-        codeRepo = new CodeRepo();
+    public ApiController(CodeRepo codeRepo) {
+        this.codeRepo = codeRepo;
     }
+
 
     @GetMapping("/code")
     public ResponseEntity<?> getCode() {
@@ -21,8 +22,8 @@ public class ApiController {
     }
 
     @PostMapping(value = "/code/new", consumes = "application/json")
-    public ResponseEntity<?> newCode(@RequestAttribute(value = "code") String newCode) {
-        codeRepo.setCode(new CodeEntity(newCode));
+    public ResponseEntity<?> newCode(@RequestBody String code) {
+        codeRepo.setCode(new CodeEntity(code));
         return ResponseEntity.ok().build();
     }
 

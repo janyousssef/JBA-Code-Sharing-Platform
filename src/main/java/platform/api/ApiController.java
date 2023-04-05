@@ -19,12 +19,12 @@ public class ApiController {
 
     @GetMapping("/code")
     public ResponseEntity<?> getCode() {
-        return new ResponseEntity<>(codeRepo.getCode(), HttpStatus.OK);
+        return new ResponseEntity<>(codeRepo.getLastCode(), HttpStatus.OK);
     }
 
     @PostMapping(value = "/code/new", consumes = "application/json")
     public ResponseEntity<?> newCode(@RequestBody CodeEntity code) {
-        codeRepo.setCode(code);
+        codeRepo.addCode(code);
         return new ResponseEntity<>(new ReallyJBA(),HttpStatus.OK);
     }
     //I am forced to use this class because I need a JSON response to look like this ->'{}' not like this ''

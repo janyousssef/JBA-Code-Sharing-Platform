@@ -18,7 +18,7 @@ public class WebController {
 
     @GetMapping("/code")
     public ModelAndView getCode() {
-        CodeEntity codeSnippet = codeRepo.getCode();
+        CodeEntity codeSnippet = codeRepo.getLastCode();
         ModelAndView mv = new ModelAndView();
         mv.addObject("codeEntity", codeSnippet);
         mv.setViewName("code");

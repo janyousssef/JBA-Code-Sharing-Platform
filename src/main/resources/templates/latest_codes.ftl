@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>Latest</title>
 </head>
 <body>
-<ul style="list-style-type: none">
-    <li th:each="code : ${codes}">
-        <a th:text="${code.creationDate}" style="color: aquamarine"></a>
-        <br>
-        <a th:text="${code.code}" style="border: 2px ;border-style: solid;background-color: blue "></a>
-    </li>
-</ul>
+<#list codes as code>
+<span id="load_date">${code.creationDate()}</span>
+<pre id="code_snippet">${code.code()}</pre>
+</#list>
 </body>
 
 </html>

@@ -1,0 +1,16 @@
+GET http://localhost:8080/api/code/1
+Accept: application/json
+
+###
+GET http://localhost:8080/api/code/latest
+Accept: application/json
+
+###
+POST http://localhost:8080/api/code/new
+Content-Type: application/json
+
+{
+  "code": "public static void main(String[] args)"
+}
+
+###

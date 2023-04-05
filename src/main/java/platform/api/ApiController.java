@@ -1,11 +1,12 @@
 package platform.api;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import platform.code.CodeEntity;
 import platform.code.CodeRepo;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping(path = "/api", produces = "application/json")
@@ -17,20 +18,22 @@ public class ApiController {
     }
 
 
-    @GetMapping("/code")
+    @GetMapping("/code/{id}")
+    public ResponseEntity<?> getCode(@PathVariable int id) {
+        return new ResponseEntity<>(codeRepo.findCodeById(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/code/latest")
     public ResponseEntity<?> getCode() {
-        return new ResponseEntity<>(codeRepo.getLastCode(), HttpStatus.OK);
+        return new ResponseEntity<>(codeRepo.getLastCodes(10), HttpStatus.OK);
     }
 
     @PostMapping(value = "/code/new", consumes = "application/json")
     public ResponseEntity<?> newCode(@RequestBody CodeEntity code) {
         codeRepo.addCode(code);
-        return new ResponseEntity<>(new ReallyJBA(),HttpStatus.OK);
-    }
-    //I am forced to use this class because I need a JSON response to look like this ->'{}' not like this ''
-    @JsonSerialize
-    class ReallyJBA {
 
+        return new ResponseEntity<>(Map.of("id", codeRepo.size()), HttpStatus.OK);
     }
+
 
 }

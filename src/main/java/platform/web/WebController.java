@@ -2,10 +2,13 @@ package platform.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import platform.code.CodeEntity;
 import platform.code.CodeRepo;
+
+import java.util.List;
 
 @Controller
 @RequestMapping(path = "/", produces = "text/html")
@@ -16,11 +19,11 @@ public class WebController {
         this.codeRepo = codeRepo;
     }
 
-    @GetMapping("/code")
-    public ModelAndView getCode() {
-        CodeEntity codeSnippet = codeRepo.getLastCode();
+    @GetMapping("/code/{id}")
+    public ModelAndView getCode(@PathVariable int id) {
+        CodeEntity codeSnippet = codeRepo.findCodeById(id);
         ModelAndView mv = new ModelAndView();
-        mv.addObject("codeEntity", codeSnippet);
+        mv.addObject("code", codeSnippet);
         mv.setViewName("code");
         return mv;
     }
@@ -29,6 +32,15 @@ public class WebController {
     public ModelAndView newCode() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("create");
+        return mv;
+    }
+    @GetMapping("/code/latest")
+    public ModelAndView viewLatestCodes() {
+        ModelAndView mv = new ModelAndView();
+        List<CodeEntity> lastCodes = codeRepo.getLastCodes(10);
+        mv.addObject("codes", lastCodes);
+        System.out.println(lastCodes);
+        mv.setViewName("latest_codes");
         return mv;
     }
 

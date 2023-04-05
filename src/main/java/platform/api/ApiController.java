@@ -32,7 +32,7 @@ public class ApiController {
     public ResponseEntity<?> newCode(@RequestBody CodeEntity code) {
         codeRepo.addCode(code);
 
-        return new ResponseEntity<>(Map.of("id", codeRepo.size()), HttpStatus.OK);
+        return new ResponseEntity<>(Map.of("id", String.valueOf(codeRepo.size())), HttpStatus.OK);
     }
 
 

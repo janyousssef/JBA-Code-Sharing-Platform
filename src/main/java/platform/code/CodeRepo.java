@@ -34,4 +34,8 @@ public class CodeRepo {
     public void addCode(CodeEntity code) {
         codes.add(code);
     }
+
+    public int size() {
+        return codes.size();
+    }
 }

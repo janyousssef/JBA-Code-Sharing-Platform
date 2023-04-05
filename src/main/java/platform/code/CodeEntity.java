@@ -8,7 +8,13 @@ import java.time.format.DateTimeFormatter;
 public record CodeEntity(String code, @JsonProperty("date") String creationDate) {
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    public CodeEntity(String code, @JsonProperty("date") String creationDate) {
+    /**
+     * Generates a new CodeEntity with the creation date set to LocalDateTime.now()
+     *
+     * @param code         the code snippet
+     * @param creationDate the date the code was created
+     */
+    public CodeEntity(String code, String creationDate) {
         this.code = code;
         this.creationDate = creationDate == null ? LocalDateTime.now().format(formatter) : creationDate;
     }
@@ -20,6 +26,7 @@ public record CodeEntity(String code, @JsonProperty("date") String creationDate)
      */
     public CodeEntity(String code) {
         this(code, LocalDateTime.now().format(formatter));
+
     }
 }
 

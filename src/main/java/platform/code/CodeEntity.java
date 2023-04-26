@@ -34,16 +34,6 @@ public final class CodeEntity {
         this.creationDate = creationDate == null ? LocalDateTime.now() : creationDate;
     }
 
-    /**
-     * Generates a new CodeEntity with the creation date set to LocalDateTime.now()
-     *
-     * @param code the code snippet
-     */
-    public CodeEntity(String code) {
-        this(code, LocalDateTime.now());
-
-    }
-
     public CodeEntity() {
 
     }

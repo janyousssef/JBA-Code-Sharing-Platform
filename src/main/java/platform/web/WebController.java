@@ -20,8 +20,8 @@ public class WebController {
     }
 
     @GetMapping("/code/{id}")
-    public ModelAndView getCode(@PathVariable int id) {
-        CodeEntity codeSnippet = codeRepo.findCodeById(id);
+    public ModelAndView getCode(@PathVariable Long id) {
+        CodeEntity codeSnippet = codeRepo.findById(id).get();
         ModelAndView mv = new ModelAndView();
         mv.addObject("code", codeSnippet);
         mv.setViewName("code");
@@ -37,9 +37,9 @@ public class WebController {
     @GetMapping("/code/latest")
     public ModelAndView viewLatestCodes() {
         ModelAndView mv = new ModelAndView();
-        List<CodeEntity> lastCodes = codeRepo.getLastCodes(10);
+        List<CodeEntity> lastCodes = codeRepo.findAll();
+        lastCodes.forEach(System.out::println);
         mv.addObject("codes", lastCodes);
-        System.out.println(lastCodes);
         mv.setViewName("latest_codes");
         return mv;
     }

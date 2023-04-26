@@ -19,20 +19,20 @@ public class ApiController {
 
 
     @GetMapping("/code/{id}")
-    public ResponseEntity<?> getCode(@PathVariable int id) {
-        return new ResponseEntity<>(codeRepo.findCodeById(id), HttpStatus.OK);
+    public ResponseEntity<?> getCode(@PathVariable Long id) {
+        return new ResponseEntity<>(codeRepo.findById(id), HttpStatus.OK);
     }
 
-    @GetMapping("/code/latest")
-    public ResponseEntity<?> getCode() {
-        return new ResponseEntity<>(codeRepo.getLastCodes(10), HttpStatus.OK);
-    }
+//    @GetMapping("/code/latest")
+//    public ResponseEntity<?> getCode() {
+//        return new ResponseEntity<>(codeRepo.getLastCodes(10), HttpStatus.OK);
+//    }
 
     @PostMapping(value = "/code/new", consumes = "application/json")
     public ResponseEntity<?> newCode(@RequestBody CodeEntity code) {
-        codeRepo.addCode(code);
-
-        return new ResponseEntity<>(Map.of("id", String.valueOf(codeRepo.size())), HttpStatus.OK);
+        codeRepo.save(code);
+        System.out.println(code);
+        return new ResponseEntity<>(Map.of("id", String.valueOf(codeRepo.count())), HttpStatus.OK);
     }
 
 

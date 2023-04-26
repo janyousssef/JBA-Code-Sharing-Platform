@@ -5,8 +5,8 @@
     <title>Code</title>
 </head>
 <body><span>date:</span>
-<span id="load_date">${code.creationDate()}</span>
-<pre id="code_snippet">${code.code()}</pre>
+<span id="load_date">${code.getFormattedDate()}</span>
+<pre id="code_snippet">${code.getCode()}</pre>
 
 
 </body>

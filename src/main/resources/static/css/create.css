@@ -1,0 +1,60 @@
+/* Set the font and background color for the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Style the page title */
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Style the code snippet list */
+body{
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Style each code snippet item */
+#code_snippet {
+  width: 900px;
+  height: 450px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+
+  
+}
+/* Hover effect for code snippet items */
+#code_snippet:hover{
+  transition: all 0.15s ease-in-out;
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+}
+
+#send_snippet {
+  font: 20px Arial, sans-serif;
+  letter-spacing: 7px;
+  width: 915px;
+  height: 50px;
+}
+
+#code_snippet:focus{
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+}
+#send_snippet:hover{
+  font-weight: bold;
+  transition: all 0.1s ease-in-out;
+  background-color: aqua;
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+}

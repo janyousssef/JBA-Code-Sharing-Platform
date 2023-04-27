@@ -40,7 +40,7 @@ public class WebController {
     @GetMapping("/code/latest")
     public ModelAndView viewLatestCodes() {
         ModelAndView mv = new ModelAndView();
-        List<CodeEntity> lastCodes = codeService.getLast10Codes();
+        List<CodeEntity> lastCodes = codeService.getLast10Codes(10);
         mv.addObject("codes", lastCodes);
         mv.setViewName("latest_codes");
         return mv;

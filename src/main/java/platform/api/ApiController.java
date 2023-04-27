@@ -30,7 +30,7 @@ public class ApiController {
 
     @GetMapping("/code/latest")
     public ResponseEntity<?> getCode() {
-        List<CodeEntity> last10 = codeService.getLast10Codes();
+        List<CodeEntity> last10 = codeService.getLast10Codes(10);
         return new ResponseEntity<>(last10, HttpStatus.OK);
     }
 

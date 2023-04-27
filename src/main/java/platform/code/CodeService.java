@@ -1,8 +1,10 @@
 package platform.code;
 
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -13,9 +15,14 @@ public class CodeService {
         this.codeRepo = codeRepo;
     }
 
-    public List<CodeEntity> getLast10Codes() {
-        List<CodeEntity> codes = codeRepo.findAll();
-        Collections.reverse(codes);
-        return codes.subList(0, Math.min(codes.size(), 10));
+    public List<CodeEntity> getLast10Codes(int size) {
+        Pageable pageable = PageRequest.of((int) (codeRepo.count() / size) - 1,
+                                           size,
+                                           Sort.by(Sort.Direction.DESC,
+                                                   "id"));
+
+        return codeRepo.findAll(pageable)
+                .toList();
+
     }
 }

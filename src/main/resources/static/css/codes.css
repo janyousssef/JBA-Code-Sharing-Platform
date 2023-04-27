@@ -1,0 +1,21 @@
+body{
+    background-color: aqua;
+}
+#code_snippet{
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#load_date{
+    color: #6d15ff;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

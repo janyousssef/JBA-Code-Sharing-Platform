@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import platform.api.CodeService;
 import platform.code.CodeEntity;
 import platform.code.CodeRepo;
 
@@ -13,10 +14,12 @@ import java.util.List;
 @Controller
 @RequestMapping(path = "/", produces = "text/html")
 public class WebController {
-    final CodeRepo codeRepo;
+    private final CodeRepo codeRepo;
+    private final CodeService codeService;
 
-    public WebController(CodeRepo codeRepo) {
+    public WebController(CodeRepo codeRepo, CodeService codeService) {
         this.codeRepo = codeRepo;
+        this.codeService = codeService;
     }
 
     @GetMapping("/code/{id}")
@@ -37,7 +40,7 @@ public class WebController {
     @GetMapping("/code/latest")
     public ModelAndView viewLatestCodes() {
         ModelAndView mv = new ModelAndView();
-        List<CodeEntity> lastCodes = codeRepo.findAll();
+        List<CodeEntity> lastCodes = codeService.getLast10Codes();
         mv.addObject("codes", lastCodes);
         mv.setViewName("latest_codes");
         return mv;

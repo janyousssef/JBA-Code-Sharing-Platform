@@ -1,5 +1,7 @@
 package platform.code;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,10 +19,11 @@ public final class CodeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long id;
     private String code;
-    @CreatedDate
     @CreationTimestamp
+    @JsonProperty("date")
     private LocalDateTime creationDate;
 
     /**

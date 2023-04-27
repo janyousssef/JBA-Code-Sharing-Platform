@@ -1,14 +1,14 @@
-package platform.api;
+package platform.code;
 
 import org.springframework.stereotype.Service;
-import platform.code.CodeEntity;
-import platform.code.CodeRepo;
 
 import java.util.Collections;
 import java.util.List;
+
 @Service
 public class CodeService {
     private final CodeRepo codeRepo;
+
     public CodeService(CodeRepo codeRepo) {
         this.codeRepo = codeRepo;
     }

@@ -16,7 +16,7 @@ public class CodeService {
     }
 
     public List<CodeEntity> getLast10Codes(int size) {
-        Pageable pageable = PageRequest.of((int) (codeRepo.count() / size) - 1,
+        Pageable pageable = PageRequest.of((int) Math.max(0,((codeRepo.count() / size) - 1)),
                                            size,
                                            Sort.by(Sort.Direction.DESC,
                                                    "id"));

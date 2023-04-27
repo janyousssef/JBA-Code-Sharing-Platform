@@ -9,7 +9,7 @@
     <script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" href="/css/codes.css">
 </head>
-<body><span>date:</span>
+
 <span id="load_date">${code.getCreationDate()}</span>
 <pre id="code_snippet"><code>${code.getCode()}</code></pre>
 

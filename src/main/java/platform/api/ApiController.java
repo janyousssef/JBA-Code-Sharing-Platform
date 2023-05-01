@@ -24,7 +24,7 @@ public class ApiController {
 
 
     @GetMapping("/code/{id}")
-    public ResponseEntity<?> getCode(@PathVariable Long id) {
+    public ResponseEntity<?> getCode(@PathVariable String id) {
         return new ResponseEntity<>(codeRepo.findById(id), HttpStatus.OK);
     }
 

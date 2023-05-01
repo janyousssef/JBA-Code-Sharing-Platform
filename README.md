@@ -9,13 +9,15 @@ This is a code sharing website with both an API and a UI, you can:
  - Mark codes as private by adding a time or view limit to them
  - Private codes do not appear in the latest uploaded codes
  
-## Availible endpoints
+## Available endpoints
 Web UI:
  - /code/[latest | {uuid} | new]
 API:
- - api/code/[latest | {uuid} | new]
+ - api/code/[latest | {uuid} | new]  
+
 Note: you can play with the API from the src/main/java/platform/api/apitests.http
-but this works only on IntelliJ
+but this works only on IntelliJ  
+
 ## Technologies used
  - Spring Web, Data JPA, Actuator
  - H2

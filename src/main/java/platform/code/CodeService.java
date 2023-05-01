@@ -1,10 +1,8 @@
 package platform.code;
 
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -16,13 +14,8 @@ public class CodeService {
     }
 
     public List<CodeEntity> getLastNCodes(int n) {
-        Pageable pageable = PageRequest.of((int) Math.max(0,((codeRepo.count() / n) - 1)),
-            n,
-            Sort.by(Sort.Direction.DESC,
-                    "creationDate"));
 
-        return codeRepo.findAll(pageable)
-                .toList();
-
+        return codeRepo.findTop10ByisLimitedAndCreationDateAfterOrderByCreationDateDesc(false,
+                LocalDateTime.of(2000, 1, 1, 1, 1));
     }
 }

@@ -30,7 +30,6 @@ public final class CodeEntity {
     @JsonProperty("views")
     private long views;
     private long time;
-    private boolean isLimited = false;
     public boolean isTimeLimited;
     public boolean isViewsLimited;
     public CodeEntity() {
@@ -45,7 +44,6 @@ public final class CodeEntity {
         this.time = time;
         this.isTimeLimited = time > 0;
         this.isViewsLimited = views > 0;
-        this.isLimited = isTimeLimited || isViewsLimited;
     }
 
     @JsonIgnore
@@ -85,7 +83,7 @@ public final class CodeEntity {
     @JsonProperty("time")
     public long getRemainingTimeSecs() {
 
-        return isLimited ? SECONDS.between(LocalTime.now(), creationDate.toLocalTime()
+        return isTimeLimited ? SECONDS.between(LocalTime.now(), creationDate.toLocalTime()
                 .plusSeconds(this.time)) : 0;
     }
 
@@ -97,13 +95,7 @@ public final class CodeEntity {
         this.time = seconds;
     }
 
-    @JsonIgnore
-    public boolean isLimited() {
-        return isLimited;
-    }
-
     public void setLimited(boolean limited) {
-        isLimited = limited;
     }
 
     @JsonIgnore
@@ -128,6 +120,8 @@ public final class CodeEntity {
     }
 
     public boolean isStillValid() {
-        return !isLimited || (this.views > 0 && getTime() > 0);
+    if(isViewsLimited) return views > 0;
+    if(isTimeLimited) return getRemainingTimeSecs() > 0;
+    return true;
     }
 }

@@ -107,4 +107,8 @@ public final class CodeEntity {
     public void decrementViews() {
         this.views--;
     }
+
+    public boolean isStillValid() {
+        return !isLimited || (this.views > 0 && getTime() > 0);
+    }
 }

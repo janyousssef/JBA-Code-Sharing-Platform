@@ -1,5 +1,6 @@
 package platform.web;
 
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +25,7 @@ public class WebController {
 
     @GetMapping("/code/{id}")
     public ModelAndView getCode(@PathVariable Long id) {
-        CodeEntity codeSnippet = codeRepo.findById(id).get();
+        CodeEntity codeSnippet = codeRepo.findById(id).orElseThrow(()->new EntityNotFoundException("Code with id = "+id+"not found"));
         ModelAndView mv = new ModelAndView();
         mv.addObject("code", codeSnippet);
         mv.setViewName("code");

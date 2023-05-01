@@ -1,17 +1,23 @@
 package platform.code;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Objects;
+import java.time.LocalTime;
 
+import static java.time.temporal.ChronoUnit.SECONDS;
+
+
+@ToString
+@EqualsAndHashCode
 @Entity
 public final class CodeEntity {
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -21,21 +27,25 @@ public final class CodeEntity {
     @CreationTimestamp
     @JsonProperty("date")
     private LocalDateTime creationDate;
+    @JsonProperty("views")
+    private long views;
 
-    /**
-     * Generates a new CodeEntity with the creation date set to LocalDateTime.now()
-     *
-     * @param code         the code snippet
-     * @param creationDate the date the code was created
-     */
-    public CodeEntity(String code, LocalDateTime creationDate) {
-        this.code = code;
-        this.creationDate = creationDate == null ? LocalDateTime.now() : creationDate;
-    }
+    private long time;
+    private boolean isLimited = false;
 
     public CodeEntity() {
 
     }
+
+    @JsonCreator
+    public CodeEntity(String id, String code, long views, long time) {
+        this.id = id;
+        this.code = code;
+        this.views = views;
+        this.time = time;
+        this.isLimited = time > 0 || views > 0;
+    }
+
     @JsonIgnore
     public String getId() {
         return id;
@@ -61,26 +71,38 @@ public final class CodeEntity {
         this.creationDate = creationDate;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        CodeEntity that = (CodeEntity) o;
-        return Objects.equals(id, that.id) && Objects.equals(code, that.code) && Objects.equals(creationDate, that.creationDate);
+
+    public long getViews() {
+        return views;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, code, creationDate);
+    public void setViews(long remainingViews) {
+        this.views = remainingViews;
     }
 
-    @Override
-    public String toString() {
-        return "CodeEntity{" +
-                "id=" + id +
-                ", code='" + code + '\'' +
-                ", creationDate='" + creationDate + '\'' +
-                '}';
+    @JsonProperty("time")
+    public long getRemainingTimeSecs() {
+
+        return isLimited ? SECONDS.between(LocalTime.now(), creationDate.toLocalTime()
+                .plusSeconds(this.time)) : 0;
     }
+
+    public long getTime() {
+        return time;
+    }
+
+    public void setTime(long seconds) {
+        this.time = seconds;
+    }
+
+    @JsonIgnore
+    public boolean isLimited() {
+        return isLimited;
+    }
+
+    public void setLimited(boolean limited) {
+        isLimited = limited;
+    }
+
 }
 

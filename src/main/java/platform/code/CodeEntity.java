@@ -104,7 +104,7 @@ public final class CodeEntity {
         isLimited = limited;
     }
 
-    public void decreaseViews() {
+    public void decrementViews() {
         this.views--;
     }
 }

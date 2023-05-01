@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1828a9e9-7f1e-4828-bc3b-0d8fb1bd2707" name="Changes" comment="refactor to throw exception on non-existent entity with such id">
+      <change afterPath="$PROJECT_DIR$/snippets.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Class" />
+        <option value="HTML File" />
+        <option value="HTTP Request" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-19.0.2/lib/src.zip!/java.base/java/time/LocalDateTime.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/3.0.5/spring-boot-autoconfigure-3.0.5-sources.jar!/org/springframework/boot/autoconfigure/data/jpa/EnversRevisionRepositoriesRegistrar.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/3.0.5/spring-boot-autoconfigure-3.0.5-sources.jar!/org/springframework/boot/autoconfigure/data/jpa/JpaRepositoriesAutoConfiguration.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/3.0.5/spring-boot-autoconfigure-3.0.5-sources.jar!/org/springframework/boot/autoconfigure/data/jpa/JpaRepositoriesRegistrar.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/6.0.7/spring-context-6.0.7-sources.jar!/org/springframework/context/annotation/Scope.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/6.0.7/spring-webmvc-6.0.7-sources.jar!/org/springframework/web/servlet/View.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="2NUaZxis8LC9ljy9cvhplSahCew" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Notification.DoNotAsk-null&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;ALL&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/IdeaProjects/JBA-Code-Sharing-Platform/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IdeaProjects/JBA-Code-Sharing-Platform/src/main/resources/static/css&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;37b177e3cc47ce66c31fc472891e235e&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;,
+      &quot;PLAIN_TEXT&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="platform.api" />
+      <recent name="com.jan.codesharing.code" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\JBA-Code-Sharing-Platform\src\main\resources\static\css" />
+      <recent name="D:\IdeaProjects\JBA-Code-Sharing-Platform\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\JBA-Code-Sharing-Platform\src\main\resources" />
+      <recent name="D:\IdeaProjects\JBA-Code-Sharing-Platform\src\main\resources\static\scripts" />
+      <recent name="D:\IdeaProjects\JBA-Code-Sharing-Platform\src\main\resources\" />
+      <recent name="D:\IdeaProjects\JBA-Code-Sharing-Platform\src\main\resources\static" />
+      <recent name="D:\IdeaProjects\JBA-Code-Sharing-Platform\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="excludedTypes">
+      <set>
+        <option value="HttpClient.HttpRequestRunConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.api tests | #3">
+    <configuration name="All in api tests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/java/platform/api/api tests.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="api tests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main/java/platform/api/api tests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="api tests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main/java/platform/api/api tests.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="new code test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main/java/platform/api/new code test.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="CodeSharingPlatform" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" />
+      <module name="JBA-Code-Sharing-Platform" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="platform.CodeSharingPlatform" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="platform.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="JBA-Code-Sharing-Platform" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="platform.CodeSharingPlatform" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.All in api tests" />
+      <item itemvalue="HTTP Request.api tests | #2" />
+      <item itemvalue="HTTP Request.api tests | #3" />
+      <item itemvalue="HTTP Request.new code test | #1" />
+      <item itemvalue="Spring Boot.Main" />
+      <item itemvalue="Spring Boot.CodeSharingPlatform" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.api tests | #3" />
+        <item itemvalue="Spring Boot.CodeSharingPlatform" />
+        <item itemvalue="HTTP Request.api tests | #2" />
+        <item itemvalue="HTTP Request.All in api tests" />
+        <item itemvalue="HTTP Request.new code test | #1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1828a9e9-7f1e-4828-bc3b-0d8fb1bd2707" name="Changes" comment="" />
+      <created>1679721174052</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679721174052</updated>
+      <workItem from="1679721177658" duration="6221000" />
+      <workItem from="1679728007537" duration="16548000" />
+      <workItem from="1679745550465" duration="170000" />
+      <workItem from="1679746059399" duration="1005000" />
+      <workItem from="1679786977235" duration="2514000" />
+      <workItem from="1679799688690" duration="207000" />
+      <workItem from="1680186061637" duration="10948000" />
+      <workItem from="1680200111367" duration="1062000" />
+      <workItem from="1680728950871" duration="5993000" />
+      <workItem from="1680736437478" duration="1211000" />
+      <workItem from="1680737963661" duration="594000" />
+      <workItem from="1681363195997" duration="8000" />
+      <workItem from="1682544346260" duration="636000" />
+      <workItem from="1682545088955" duration="10001000" />
+      <workItem from="1682558467284" duration="629000" />
+      <workItem from="1682560137318" duration="1457000" />
+      <workItem from="1682567119992" duration="2416000" />
+      <workItem from="1682633826332" duration="3010000" />
+      <workItem from="1682953334268" duration="712000" />
+    </task>
+    <task id="LOCAL-00028" summary="rename | refactor">
+      <created>1679746457750</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1679746457750</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add CodeRepo to centralize state of code">
+      <created>1680190851986</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1680190851986</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add date field">
+      <created>1680190877896</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1680190877896</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add date field to code entity">
+      <created>1680190893550</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1680190893550</updated>
+    </task>
+    <task id="LOCAL-00032" summary="format code">
+      <created>1680190950550</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1680190950550</updated>
+    </task>
+    <task id="LOCAL-00033" summary="refactor">
+      <created>1680191164937</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1680191164937</updated>
+    </task>
+    <task id="LOCAL-00034" summary="refactor">
+      <created>1680191280337</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1680191280337</updated>
+    </task>
+    <task id="LOCAL-00035" summary="move the responsibility for dateCreated field to the constructor of CodeEntity">
+      <created>1680192147435</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1680192147435</updated>
+    </task>
+    <task id="LOCAL-00036" summary="refactor">
+      <created>1680192384937</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1680192384937</updated>
+    </task>
+    <task id="LOCAL-00037" summary="add html page and script for adding a new code">
+      <created>1680194604522</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1680194604522</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fixed bug where a new CodeRepo was being created for the ApiController instead of injecting the Singleton">
+      <created>1680194797105</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1680194797105</updated>
+    </task>
+    <task id="LOCAL-00039" summary="add /code/new endpoint">
+      <created>1680194819396</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1680194819396</updated>
+    </task>
+    <task id="LOCAL-00040" summary="refactor">
+      <created>1680194836323</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1680194836323</updated>
+    </task>
+    <task id="LOCAL-00041" summary="provided with a null date, use LocalDateTime.now()">
+      <created>1680196504194</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1680196504194</updated>
+    </task>
+    <task id="LOCAL-00042" summary="map new code into CodeEntity directly">
+      <created>1680196564675</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1680196564675</updated>
+    </task>
+    <task id="LOCAL-00043" summary="simplify HTML">
+      <created>1680200405136</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1680200405136</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Stage #2 passed&#10;add empty class to support returning empty JSON body">
+      <created>1680200454012</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1680200454012</updated>
+    </task>
+    <task id="LOCAL-00045" summary="just testing GitHub copilot&#10;javadoc generated with copilot">
+      <created>1680729225485</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1680729225485</updated>
+    </task>
+    <task id="LOCAL-00046" summary="add all needed functions to the code repo, rename some old functions">
+      <created>1680730969323</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1680730969323</updated>
+    </task>
+    <task id="LOCAL-00047" summary="add size() function">
+      <created>1680731224804</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1680731224804</updated>
+    </task>
+    <task id="LOCAL-00048" summary="add and adjust api endpoints">
+      <created>1680731442373</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1680731442373</updated>
+    </task>
+    <task id="LOCAL-00049" summary="added api tests">
+      <created>1680732017698</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1680732017698</updated>
+    </task>
+    <task id="LOCAL-00050" summary="add latest codes page">
+      <created>1680734858180</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1680734858181</updated>
+    </task>
+    <task id="LOCAL-00051" summary="rename model attribute">
+      <created>1680734874623</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1680734874623</updated>
+    </task>
+    <task id="LOCAL-00052" summary="change `id` from json number to string">
+      <created>1680734896606</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1680734896606</updated>
+    </task>
+    <task id="LOCAL-00053" summary="migrate from thymeleaf to freemarker #1">
+      <created>1680736842608</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1680736842608</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Stage #3 passed&#10;add IDs to the elements">
+      <created>1680738009682</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1680738009682</updated>
+    </task>
+    <task id="LOCAL-00055" summary="add H2 and Spring JPA">
+      <created>1682545937668</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1682545937668</updated>
+    </task>
+    <task id="LOCAL-00056" summary="H2 and JPA working">
+      <created>1682549874854</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1682549874854</updated>
+    </task>
+    <task id="LOCAL-00057" summary="H2 and JPA working">
+      <created>1682549936433</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1682549936433</updated>
+    </task>
+    <task id="LOCAL-00058" summary="remove unused imports">
+      <created>1682550418655</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1682550418655</updated>
+    </task>
+    <task id="LOCAL-00059" summary="remove debug prints">
+      <created>1682550714851</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1682550714851</updated>
+    </task>
+    <task id="LOCAL-00060" summary="add syntax highlighting to code snippets">
+      <created>1682550881653</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1682550881653</updated>
+    </task>
+    <task id="LOCAL-00061" summary="move scripts to their own folder">
+      <created>1682553674539</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1682553674539</updated>
+    </task>
+    <task id="LOCAL-00062" summary="add some css">
+      <created>1682553683006</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1682553683006</updated>
+    </task>
+    <task id="LOCAL-00063" summary="repair /latest in api and web">
+      <created>1682554811382</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1682554811382</updated>
+    </task>
+    <task id="LOCAL-00064" summary="update html">
+      <created>1682554991222</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1682554991222</updated>
+    </task>
+    <task id="LOCAL-00065" summary="move code service to code package">
+      <created>1682560423286</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1682560423286</updated>
+    </task>
+    <task id="LOCAL-00066" summary="stage 4 passed">
+      <created>1682560451394</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1682560451394</updated>
+    </task>
+    <task id="LOCAL-00067" summary="refactor to use Pageable">
+      <created>1682561489171</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1682561489171</updated>
+    </task>
+    <task id="LOCAL-00068" summary="fixed bug that caused negative index">
+      <created>1682567515742</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1682567515743</updated>
+    </task>
+    <task id="LOCAL-00069" summary="add some css">
+      <created>1682567610515</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1682567610516</updated>
+    </task>
+    <task id="LOCAL-00070" summary="add some css">
+      <created>1682568878562</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1682568878562</updated>
+    </task>
+    <task id="LOCAL-00071" summary="add support for 1000 char snippets">
+      <created>1682569504590</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1682569504590</updated>
+    </task>
+    <task id="LOCAL-00072" summary="add title">
+      <created>1682569528639</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1682569528639</updated>
+    </task>
+    <task id="LOCAL-00073" summary="refactored to use derived queries instead of paging">
+      <created>1682635767545</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1682635767545</updated>
+    </task>
+    <task id="LOCAL-00074" summary="remove unused annotation">
+      <created>1682953698256</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1682953698257</updated>
+    </task>
+    <task id="LOCAL-00075" summary="refactor to return snippet id from DB instead of relying on count">
+      <created>1682953770693</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1682953770693</updated>
+    </task>
+    <task id="LOCAL-00076" summary="refactor to throw exception on non-existent entity with such id">
+      <created>1682953957344</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1682953957344</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="added api tests" />
+    <MESSAGE value="add latest codes page" />
+    <MESSAGE value="rename model attribute" />
+    <MESSAGE value="change `id` from json number to string" />
+    <MESSAGE value="migrate from thymeleaf to freemarker #1" />
+    <MESSAGE value="Stage #3 passed&#10;add IDs to the elements" />
+    <MESSAGE value="add H2 and Spring JPA" />
+    <MESSAGE value="H2 and JPA working" />
+    <MESSAGE value="remove unused imports" />
+    <MESSAGE value="remove debug prints" />
+    <MESSAGE value="add syntax highlighting to code snippets" />
+    <MESSAGE value="move scripts to their own folder" />
+    <MESSAGE value="repair /latest in api and web" />
+    <MESSAGE value="update html" />
+    <MESSAGE value="move code service to code package" />
+    <MESSAGE value="stage 4 passed" />
+    <MESSAGE value="refactor to use Pageable" />
+    <MESSAGE value="fixed bug that caused negative index" />
+    <MESSAGE value="add some css" />
+    <MESSAGE value="add support for 1000 char snippets" />
+    <MESSAGE value="add title" />
+    <MESSAGE value="refactored to use derived queries instead of paging" />
+    <MESSAGE value="remove unused annotation" />
+    <MESSAGE value="refactor to return snippet id from DB instead of relying on count" />
+    <MESSAGE value="refactor to throw exception on non-existent entity with such id" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor to throw exception on non-existent entity with such id" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

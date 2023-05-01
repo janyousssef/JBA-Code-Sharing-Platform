@@ -26,9 +26,11 @@ public class WebController {
 
     @GetMapping("/code/{id}")
     public ModelAndView getCode(@PathVariable String id) {
-        CodeEntity codeSnippet = codeRepo.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND, "no entity with id =" + id));
+
+        CodeEntity code = codeService.getCodeIfNotExpired(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Code not found"));
         ModelAndView mv = new ModelAndView();
-        mv.addObject("code", codeSnippet);
+        mv.addObject("code", code);
         mv.setViewName("code");
         return mv;
     }

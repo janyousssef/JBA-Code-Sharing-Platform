@@ -26,8 +26,9 @@ public class ApiController {
 
     @GetMapping("/code/{id}")
     public ResponseEntity<?> getCode(@PathVariable String id) {
-        CodeEntity code = codeRepo.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "no entity with id =" + id));
+        CodeEntity code = codeService.getCodeIfNotExpired(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Code not found"));
+
         return new ResponseEntity<>(code, HttpStatus.OK);
     }
 

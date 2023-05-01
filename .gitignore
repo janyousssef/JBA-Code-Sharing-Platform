@@ -29,4 +29,4 @@ hs_err_pid*
 /.idea/http*
 
 #db file
-/snippets.mv.db
+/snippets.mv.dbsnippets.mv.db

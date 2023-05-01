@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1828a9e9-7f1e-4828-bc3b-0d8fb1bd2707" name="Changes" comment="refactor to throw exception on non-existent entity with such id">
+    <list default="true" id="1828a9e9-7f1e-4828-bc3b-0d8fb1bd2707" name="Changes" comment="update gitignore">
       <change afterPath="$PROJECT_DIR$/snippets.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,28 +216,7 @@
       <workItem from="1682560137318" duration="1457000" />
       <workItem from="1682567119992" duration="2416000" />
       <workItem from="1682633826332" duration="3010000" />
-      <workItem from="1682953334268" duration="712000" />
-    </task>
-    <task id="LOCAL-00028" summary="rename | refactor">
-      <created>1679746457750</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1679746457750</updated>
-    </task>
-    <task id="LOCAL-00029" summary="add CodeRepo to centralize state of code">
-      <created>1680190851986</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1680190851986</updated>
-    </task>
-    <task id="LOCAL-00030" summary="add date field">
-      <created>1680190877896</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1680190877896</updated>
+      <workItem from="1682953334268" duration="1093000" />
     </task>
     <task id="LOCAL-00031" summary="add date field to code entity">
       <created>1680190893550</created>
@@ -562,7 +540,28 @@
       <option name="project" value="LOCAL" />
       <updated>1682953957344</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="update gitignore">
+      <created>1682954185768</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1682954185768</updated>
+    </task>
+    <task id="LOCAL-00078" summary="add /idea folder">
+      <created>1682954219589</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1682954219589</updated>
+    </task>
+    <task id="LOCAL-00079" summary="update gitignore">
+      <created>1682954330423</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1682954330423</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,8 +580,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added api tests" />
-    <MESSAGE value="add latest codes page" />
     <MESSAGE value="rename model attribute" />
     <MESSAGE value="change `id` from json number to string" />
     <MESSAGE value="migrate from thymeleaf to freemarker #1" />
@@ -606,7 +603,9 @@
     <MESSAGE value="remove unused annotation" />
     <MESSAGE value="refactor to return snippet id from DB instead of relying on count" />
     <MESSAGE value="refactor to throw exception on non-existent entity with such id" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor to throw exception on non-existent entity with such id" />
+    <MESSAGE value="add /idea folder" />
+    <MESSAGE value="update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -30,3 +30,4 @@ hs_err_pid*
 
 #db file
 /snippets.mv.dbsnippets.mv.db
+snippets.mv.db

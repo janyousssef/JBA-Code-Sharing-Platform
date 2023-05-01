@@ -30,9 +30,10 @@ public final class CodeEntity {
     @JsonProperty("views")
     private long views;
     private long time;
+    //used in JPA derived query
     private boolean isLimited = false;
-    public boolean isTimeLimited;
-    public boolean isViewsLimited;
+    private boolean isTimeLimited;
+    private boolean isViewsLimited;
     public CodeEntity() {
 
     }
@@ -85,7 +86,7 @@ public final class CodeEntity {
     @JsonProperty("time")
     public long getRemainingTimeSecs() {
 
-        return isLimited ? SECONDS.between(LocalTime.now(), creationDate.toLocalTime()
+        return isTimeLimited ? SECONDS.between(LocalTime.now(), creationDate.toLocalTime()
                 .plusSeconds(this.time)) : 0;
     }
 
@@ -127,7 +128,10 @@ public final class CodeEntity {
         this.views--;
     }
 
+    @JsonIgnore
     public boolean isStillValid() {
-        return !isLimited || (this.views > 0 && getTime() > 0);
+    if(isViewsLimited) return views > 0;
+    if(isTimeLimited) return getRemainingTimeSecs() > 0;
+    return true;
     }
 }

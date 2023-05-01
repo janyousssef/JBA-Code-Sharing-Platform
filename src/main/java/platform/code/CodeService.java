@@ -13,7 +13,7 @@ public class CodeService {
         this.codeRepo = codeRepo;
     }
 
-    public List<CodeEntity> getLastNCodes(int n) {
+    public List<CodeEntity> getLast10Codes() {
 
         return codeRepo.findTop10ByisLimitedAndCreationDateAfterOrderByCreationDateDesc(false,
                 LocalDateTime.of(2000, 1, 1, 1, 1));

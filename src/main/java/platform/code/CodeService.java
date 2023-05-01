@@ -31,7 +31,8 @@ public class CodeService {
             codeRepo.delete(codeEntity);
             return Optional.empty();
         }
-        codeEntity.decrementViews();
+        if (codeEntity.isViewsLimited()) codeEntity.decrementViews();
+
         return Optional.of(codeRepo.save(codeEntity));
     }
 }

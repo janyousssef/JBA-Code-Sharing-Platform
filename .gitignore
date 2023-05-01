@@ -27,3 +27,6 @@ hs_err_pid*
 
 #some IntelliJ project files
 /.idea/http*
+
+#db file
+/snippets.mv.db

@@ -1,4 +1,4 @@
-GET http://localhost:8080/api/code/1
+GET http://localhost:8080/api/code/258b629b-6001-480a-9467-f2246c4b1c49
 Accept: application/json
 
 ###
@@ -6,11 +6,25 @@ GET http://localhost:8080/api/code/latest
 Accept: application/json
 
 ###
+//none limited code
 POST http://localhost:8080/api/code/new
 Content-Type: application/json
 
 {
-  "code": "public static void main(String[] args)"
+  "code": "public static void ...",
+  "time": 0,
+  "views": 0
+}
+
+###
+//limted code
+POST http://localhost:8080/api/code/new
+Content-Type: application/json
+
+{
+  "code": "public static void ...",
+  "time": 5000,
+  "views": 10
 }
 
 ###

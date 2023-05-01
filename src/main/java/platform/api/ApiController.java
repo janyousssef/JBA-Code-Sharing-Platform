@@ -38,7 +38,7 @@ public class ApiController {
 
 
     @PostMapping(value = "/code/new", consumes = "application/json")
-    public ResponseEntity<?> newCode(@RequestBody CodeEntity code) {
+    synchronized public ResponseEntity<?> newCode(@RequestBody CodeEntity code) {
         code = codeRepo.save(code);
         return new ResponseEntity<>(Map.of("id", code.getId()), HttpStatus.OK);
     }

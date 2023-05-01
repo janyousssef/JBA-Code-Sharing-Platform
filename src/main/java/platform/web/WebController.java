@@ -34,7 +34,7 @@ public class WebController {
     }
 
     @GetMapping("/code/new")
-    public ModelAndView newCode() {
+    synchronized public ModelAndView newCode() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("create");
         return mv;

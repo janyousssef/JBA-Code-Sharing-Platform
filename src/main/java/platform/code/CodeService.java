@@ -19,7 +19,7 @@ public class CodeService {
         Pageable pageable = PageRequest.of((int) Math.max(0,((codeRepo.count() / n) - 1)),
             n,
             Sort.by(Sort.Direction.DESC,
-                    "id"));
+                    "creationDate"));
 
         return codeRepo.findAll(pageable)
                 .toList();

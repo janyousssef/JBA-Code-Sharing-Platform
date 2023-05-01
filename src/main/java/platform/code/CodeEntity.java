@@ -29,10 +29,10 @@ public final class CodeEntity {
     private LocalDateTime creationDate;
     @JsonProperty("views")
     private long views;
-
     private long time;
     private boolean isLimited = false;
-
+    public boolean isTimeLimited;
+    public boolean isViewsLimited;
     public CodeEntity() {
 
     }
@@ -43,7 +43,9 @@ public final class CodeEntity {
         this.code = code;
         this.views = views;
         this.time = time;
-        this.isLimited = time > 0 || views > 0;
+        this.isTimeLimited = time > 0;
+        this.isViewsLimited = views > 0;
+        this.isLimited = isTimeLimited || isViewsLimited;
     }
 
     @JsonIgnore
@@ -102,6 +104,23 @@ public final class CodeEntity {
 
     public void setLimited(boolean limited) {
         isLimited = limited;
+    }
+
+    @JsonIgnore
+    public boolean isTimeLimited() {
+        return isTimeLimited;
+    }
+
+    public void setTimeLimited(boolean timeLimited) {
+        isTimeLimited = timeLimited;
+    }
+    @JsonIgnore
+    public boolean isViewsLimited() {
+        return isViewsLimited;
+    }
+
+    public void setViewsLimited(boolean viewsLimited) {
+        isViewsLimited = viewsLimited;
     }
 
     public void decrementViews() {

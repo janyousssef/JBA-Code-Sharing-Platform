@@ -1,5 +1,6 @@
 package platform.api;
 
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +26,8 @@ public class ApiController {
 
     @GetMapping("/code/{id}")
     public ResponseEntity<?> getCode(@PathVariable String id) {
-        return new ResponseEntity<>(codeRepo.findById(id), HttpStatus.OK);
+        return new ResponseEntity<>(codeRepo.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("no entity with id =" + id)), HttpStatus.OK);
     }
 
     @GetMapping("/code/latest")

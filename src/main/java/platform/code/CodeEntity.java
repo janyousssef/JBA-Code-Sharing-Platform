@@ -34,6 +34,7 @@ public final class CodeEntity {
     private boolean isLimited = false;
     private boolean isTimeLimited;
     private boolean isViewsLimited;
+
     public CodeEntity() {
 
     }
@@ -42,8 +43,8 @@ public final class CodeEntity {
     public CodeEntity(String id, String code, long views, long time) {
         this.id = id;
         this.code = code;
-        this.views = views;
-        this.time = time;
+        this.views = views > 0 ? views : 0;
+        this.time = time > 0 ? time : 0;
         this.isTimeLimited = time > 0;
         this.isViewsLimited = views > 0;
         this.isLimited = isTimeLimited || isViewsLimited;
@@ -115,6 +116,7 @@ public final class CodeEntity {
     public void setTimeLimited(boolean timeLimited) {
         isTimeLimited = timeLimited;
     }
+
     @JsonIgnore
     public boolean isViewsLimited() {
         return isViewsLimited;
@@ -130,8 +132,8 @@ public final class CodeEntity {
 
     @JsonIgnore
     public boolean isStillValid() {
-    if(isViewsLimited) return views > 0;
-    if(isTimeLimited) return getRemainingTimeSecs() > 0;
-    return true;
+        if (isViewsLimited) return views > 0;
+        if (isTimeLimited) return getRemainingTimeSecs() > 0;
+        return true;
     }
 }
